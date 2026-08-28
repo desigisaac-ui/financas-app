@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: oklch(84% 0.18 130);
+    --color-primary-hover: oklch(78% 0.20 130);
+    --color-primary-container: oklch(92% 0.06 130);
+    --color-primary-pale: oklch(95% 0.04 130);
+
+    --color-text-primary: oklch(12% 0.01 130);
+    --color-text-secondary: oklch(38% 0.01 130);
+    --color-text-muted: oklch(58% 0.005 130);
+    --color-bg: oklch(99% 0.005 130);
+    --color-surface: oklch(100% 0 0);
+    --color-surface-soft: oklch(94% 0.01 130);
+    --color-border: oklch(88% 0.01 130);
+
+    --color-success: oklch(58% 0.16 148);
+    --color-success-bg: oklch(94% 0.04 148);
+    --color-warning: oklch(82% 0.16 90);
+    --color-error: oklch(52% 0.18 25);
+    --color-error-bg: oklch(95% 0.03 25);
+
+    --color-entrada: oklch(58% 0.16 148);
+    --color-entrada-bg: oklch(94% 0.04 148);
+    --color-saida: oklch(52% 0.18 25);
+    --color-saida-bg: oklch(95% 0.03 25);
+
+    --background: 100 20% 99%;
+    --foreground: 100 8% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 100 8% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 100 8% 12%;
+    --primary: 100 72% 55%;
+    --primary-foreground: 100 8% 6%;
+    --secondary: 100 8% 94%;
+    --secondary-foreground: 100 8% 12%;
+    --muted: 100 8% 94%;
+    --muted-foreground: 100 4% 46%;
+    --accent: 100 8% 94%;
+    --accent-foreground: 100 8% 12%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 100 8% 88%;
+    --input: 100 8% 88%;
+    --ring: 100 72% 55%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text-primary)] font-body;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: oklch(80% 0.01 130); border-radius: 3px; }
